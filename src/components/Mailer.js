@@ -11,10 +11,15 @@ const Mailer = () => {
         e.target,
         "Ps0owUJKhtm6NmLsl"
       )
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => console.log(err));
+      .then(
+        (res) => {
+          console.log(res.text);
+        },
+        (err) => {
+          console.log(err.text);
+        }
+      );
+    e.target.reset();
   }
   return (
     <div
@@ -34,13 +39,29 @@ const Mailer = () => {
         onSubmit={sendEmail}
       >
         <label>Name</label>
-        <input type="text" name="name" className="form-control"></input>
+        <input
+          type="text"
+          name="name"
+          className="form-control"
+          placeholder="Your name"
+        ></input>
 
         <label>Email</label>
-        <input type="email" name="user_email" className="form-control"></input>
+        <input
+          type="email"
+          name="user_email"
+          className="form-control"
+          placeholder="Your email"
+        ></input>
 
         <label>Message</label>
-        <textarea name="message" rows="4" className="form-control"></textarea>
+        <textarea
+          name="message"
+          rows="6"
+          className="form-control"
+          placeholder="Your message"
+        ></textarea>
+
         <input
           type="submit"
           value="Send"

@@ -17,10 +17,9 @@ export default function Category(props) {
       />
 
       <Card.Body className="contentOurWork">
-        <a href="/projectscreen" className="item ">
+        <Link to="/projectscreen" className="item">
           <i class="fa fa-expand sizeOfIt"></i>
-        </a>
-
+        </Link>
         <Card.Text className="textName">{category.projectName}</Card.Text>
         <Link to="/projectscreen">Go to the projects</Link>
       </Card.Body>

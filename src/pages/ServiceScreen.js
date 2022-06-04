@@ -54,7 +54,7 @@ export default function ServiceScreen(props) {
         <Container className="glossyCodeTexts-Contact">
           <Row>
             <Col className="w 40%">
-              <h2>Contact Us</h2>
+              <h2>Services</h2>
             </Col>
           </Row>
         </Container>
@@ -89,7 +89,7 @@ export default function ServiceScreen(props) {
                   <ListGroup.Item>
                     <Row>
                       <Col>
-                        <p>
+                        <p className="textJustify">
                           We are an Erbil web design company delivering
                           stunning, functional websites and web-apps that
                           resonate with the people interacting with them – your
@@ -136,18 +136,17 @@ export default function ServiceScreen(props) {
               <ul>
                 <li>
                   <i class="fa fa-location-arrow colorInfo"></i>
-                  No 144, Dar u Asn (Hadid u Khashab) Ave. Shoresh, Erbil, Iraqi
-                  Kurdistan
+                  No 100, College of Science, Kerkuk St., Erbil, Iraqi Kurdistan
                 </li>
 
                 <li>
-                  <i class="fa fa-phone colorInfo"></i>+964 750 555 1 999
+                  <i class="fa fa-phone colorInfo"></i>+964 750 4410 1010
                 </li>
                 <li>
-                  <i class="fa fa-envelope colorInfo"></i>nfo@suncode.co
+                  <i class="fa fa-envelope colorInfo"></i>glossyCode.com
                 </li>
                 <li>
-                  <i class="fa fa-envelope colorInfo"></i>www.suncode.co
+                  <i class="fa fa-envelope colorInfo"></i>www.glossycode.com
                 </li>
               </ul>
             </div>

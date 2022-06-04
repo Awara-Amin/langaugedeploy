@@ -25,6 +25,8 @@ import ScrollToTop from "../components/ScrollToTop";
 import TextAnimationForContact from "../components/TextAnimationForContact";
 import { initialProjects } from "../utils/initialProjects";
 import Category from "../components/Category";
+import { Link } from "react-router-dom";
+
 // import Rating from "../components/Rating";
 // import ScrollToTop from "../components/ScrollToTop";
 // import TextAnimationForContact from "../components/TextAnimationForContact";
@@ -102,7 +104,7 @@ export default function HomeScreen() {
           <Row>
             <Col className="d-flex justify-content-center marginTandB">
               <strong>
-                <h1>Some of Our Recent Projects</h1>
+                <h1 className="projects1">Some of Our Recent Projects</h1>
               </strong>
             </Col>
           </Row>
@@ -128,11 +130,16 @@ export default function HomeScreen() {
           </Row>
           <Row className="d-flex justify-content-center marginTandB">
             <Col xs={12} sm={6} md={4} lg={4}>
-              <a href="/projectscreen" className="item ">
+              <Link to="/projectscreen" className="item">
                 <button class="btn btn-primary" type="submit">
                   See more of our projects
                 </button>
-              </a>
+              </Link>
+              {/* <a href="/projectscreen" className="item ">
+                <button class="btn btn-primary" type="submit">
+                  See more of our projects
+                </button>
+              </a> */}
             </Col>
           </Row>
         </Container>
@@ -160,9 +167,9 @@ export default function HomeScreen() {
               {/* <span className="contactsUs">Contact us</span> */}
               <TextAnimationForContact></TextAnimationForContact>
               <span>
-                <a href="/contactscreen" className="item ">
+                <Link to="/contactscreen">
                   <i className="fa fa-envelope coloredIcon-1"></i>
-                </a>
+                </Link>
               </span>
             </Col>
           </Row>
@@ -179,18 +186,17 @@ export default function HomeScreen() {
               <ul>
                 <li>
                   <i class="fa fa-location-arrow colorInfo"></i>
-                  No 144, Dar u Asn (Hadid u Khashab) Ave. Shoresh, Erbil, Iraqi
-                  Kurdistan
+                  No 100, College of Science, Kerkuk St., Erbil, Iraqi Kurdistan
                 </li>
 
                 <li>
-                  <i class="fa fa-phone colorInfo"></i>+964 750 555 1 999
+                  <i class="fa fa-phone colorInfo"></i>+964 750 4410 1010
                 </li>
                 <li>
-                  <i class="fa fa-envelope colorInfo"></i>nfo@suncode.co
+                  <i class="fa fa-envelope colorInfo"></i>glossyCode.com
                 </li>
                 <li>
-                  <i class="fa fa-envelope colorInfo"></i>www.suncode.co
+                  <i class="fa fa-envelope colorInfo"></i>www.glossycode.com
                 </li>
               </ul>
             </div>
