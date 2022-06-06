@@ -1,15 +1,9 @@
 import React, { useEffect } from "react";
 
-// import Product from "../components/Service";
-
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-// import Container from "react-bootstrap/Container";
 import { Helmet } from "react-helmet-async";
-import ListGroup from "react-bootstrap/ListGroup";
-import Button from "react-bootstrap/Button";
 // import Mailer from "../components/Mailer";
-import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import ScrollToTop from "../components/ScrollToTop";
 import data from "../utils/data";
@@ -68,16 +62,36 @@ export default function ContactScreen() {
       </section>
 
       {/*  */}
-      <div className="box-second">
+      <div className="box-second hightkaka">
         <>
           <div>
             <div>
-              <h1 className="colorPart2">WEBSITE DESIGN AGENCY IN ERBIL</h1>
+              <h1 className="makeitCenter">
+                Rememeber Glossy Code can provide the best services in:
+              </h1>
             </div>
-            <div>
+            {/* <div>
               <h7>We are specialist at:</h7>
-            </div>
-            <div>
+            </div> */}
+
+            <Container>
+              <Row>
+                <Col md={4}>Website Design and Development</Col>
+                <Col md={{ span: 4, offset: 4 }}>Graphic Web Design</Col>
+              </Row>
+              <Row>
+                <Col md={{ span: 3, offset: 3 }}>
+                  E-business Site Development
+                </Col>
+                <Col md={{ span: 3, offset: 3 }}>IT Solutions</Col>
+              </Row>
+              <Row>
+                <Col md={{ span: 6, offset: 3 }}>
+                  Web-Apps and Responsive Mobile Apps
+                </Col>
+              </Row>
+            </Container>
+            {/* <div>
               <ul>
                 <li>
                   <i class="fa fa-star colorPart2Stars"></i>Website Design and
@@ -100,7 +114,7 @@ export default function ContactScreen() {
                   Development
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </>
       </div>
@@ -131,7 +145,8 @@ export default function ContactScreen() {
               <ul>
                 <li>
                   <i class="fa fa-location-arrow colorInfo"></i>
-                  No 100, College of Science, Kerkuk St., Erbil, Iraqi Kurdistan
+                  523C+68M, College of Science, Kerkuk St, Erbil, Iraqi
+                  Kurdistan{" "}
                 </li>
 
                 <li>

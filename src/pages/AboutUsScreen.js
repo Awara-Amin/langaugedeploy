@@ -1,20 +1,13 @@
 import React, { useEffect } from "react";
-
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
 import { Helmet } from "react-helmet-async";
-import ListGroup from "react-bootstrap/ListGroup";
-import Button from "react-bootstrap/Button";
-
-import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
-
-// import SpringAnimation from "../components/SpringAnimation.js";
-import data from "../utils/data";
 import ScrollToTop from "../components/ScrollToTop";
 import AboutBackground from "../images/about_backgroundPage.webp";
 import TextAnimation from "../components/TextAnimation";
+import ChartReact from "../components/ChartReact";
+import ChartBackend from "../components/ChartBackend";
 
 export default function ContactScreen() {
   console.log("categories at homeScreen");
@@ -64,22 +57,12 @@ export default function ContactScreen() {
 
           <Col sm={7}>
             <p className="textJustify">
-              Glossy Code is one of the leading website designing & website
-              Development Company in Erbil. We believe to deliver quality
-              services to our client. We provide a media through you can
-              interact with latest industry trends. You can assure yourself for
-              a world class web solutions and 24x7 support & quality based
-              designing. Glossy Code is an Erbil based web designing and web
-              development company, this company is a rapidly growing and trusted
-              name in today's web design Industry in Kurdistan and whole Iraq.
-              Glossy Code is a top Website designing company in Erbil. We
-              provide affordable website designing,Best SEO, Mobile
-              website(Responsive Website), E-commerce and website development
-              solution. Glossy Code is a fast-growing company providing
-              full-service web products and project development, including
-              website management products,e-business site development; re-design
-              development; creative services, graphic web design, project
-              management and complete custom development.
+              Glossy Code has been growing fast and becoming one of the best
+              websites designing & website development company in Erbil. Our
+              moto is to deliver high quality services to our client. Glossy
+              Code Company provides affordable and fully functional websites and
+              mobile website (responsive website), E-commerce and website
+              development solution.
             </p>
           </Col>
         </Row>
@@ -96,11 +79,12 @@ export default function ContactScreen() {
             >
               <div className="agency-About">
                 <div className="about-2">
-                  <h1 className="colorPart2">WEBSITE DESIGN AGENCY IN ERBIL</h1>
+                  <h1 className="colorPart2">
+                    Glossy Code Company can be your partener and do all below to
+                    you :
+                  </h1>
                 </div>
-                <div className="about-2">
-                  <h7>We are specialist at:</h7>
-                </div>
+
                 <div className="about-2">
                   <ul>
                     <li>
@@ -108,28 +92,22 @@ export default function ContactScreen() {
                       and Development
                     </li>
                     <li>
-                      <i class="fa fa-star colorPart2Stars"></i>Website Design
-                      and Development
+                      <i class="fa fa-star colorPart2Stars"></i>Graphic Web
+                      Design
                     </li>
                     <li>
-                      <i class="fa fa-star colorPart2Stars"></i>Website Design
-                      and Development
+                      <i class="fa fa-star colorPart2Stars"></i>E-business Site
+                      Development
                     </li>
                     <li>
-                      <i class="fa fa-star colorPart2Stars"></i>Website Design
-                      and Development
+                      <i class="fa fa-star colorPart2Stars"></i>Mobile Website
+                      (Responsive Website)
                     </li>
                     <li>
-                      <i class="fa fa-star colorPart2Stars"></i>Website Design
-                      and Development
-                    </li>
-                    <li>
-                      <i class="fa fa-star colorPart2Stars"></i>Website Design
-                      and Development
-                    </li>
-                    <li>
-                      <i class="fa fa-star colorPart2Stars"></i>Website Design
-                      and Development
+                      <i class="fa fa-star colorPart2Stars"></i>We manage the
+                      entire life cycle of a website from design (frondend) to
+                      copywriting to search engine optimization to development
+                      to ongoing maintenance and support.
                     </li>
                   </ul>
                 </div>
@@ -140,7 +118,22 @@ export default function ContactScreen() {
       </section>
 
       {/*  */}
-      <div className="box-second">
+      <Container className="hightkaka">
+        <Row>
+          <Col className="hightkaka1">
+            <h1 className="toMakeBold">
+              The Tools We Use In Creating & Designing Websites And Web apps
+            </h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="d-flex justify-content-center text-wrap">
+            <ChartReact></ChartReact>
+            <ChartBackend></ChartBackend>
+          </Col>
+        </Row>
+      </Container>
+      {/* <div className="box-second">
         <>
           <div>
             <div>
@@ -175,7 +168,7 @@ export default function ContactScreen() {
             </div>
           </div>
         </>
-      </div>
+      </div> */}
 
       {/*  */}
 
@@ -189,7 +182,8 @@ export default function ContactScreen() {
               <ul>
                 <li>
                   <i class="fa fa-location-arrow colorInfo"></i>
-                  No 100, College of Science, Kerkuk St., Erbil, Iraqi Kurdistan
+                  523C+68M, College of Science, Kerkuk St, Erbil, Iraqi
+                  Kurdistan{" "}
                 </li>
 
                 <li>

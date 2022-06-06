@@ -33,6 +33,7 @@ main {
 }
 .spaceForOurServeces {
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 #background {
   background-image: url("./assets/background2.jpeg");
@@ -170,7 +171,23 @@ main {
   font-size: 3rem;
   color: red;
 }
-
+.chartBar {
+  display: flex;
+  justify-content: space-around;
+}
+.textChart {
+  text-align: center;
+}
+.hightkaka {
+  margin-bottom: 120px;
+  margin-top: 100px;
+}
+.hightkaka {
+  text-align: center;
+}
+.makeitCenter {
+  text-align: center;
+}
 /* /////////////////// end of bootStrap version //////////////////*/
 
 .btn-primary,
@@ -1230,5 +1247,8 @@ h8 {
     font-weight: bold;
     font-size: 1.1rem;
     color: red;
+  }
+  .marginAbove {
+    margin-top: 50px;
   }
 }

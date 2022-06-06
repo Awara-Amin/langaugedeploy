@@ -8,7 +8,7 @@ import ScrollToTop from "../components/ScrollToTop";
 
 // import OtherSkills from "../components/OtherSkills";
 import { initialProjects } from "../utils/initialProjects";
-import data from "../utils/data";
+// import data from "../utils/data";
 import OtherSkills from "../components/OtherSkills";
 import ProjectBackground from "../images/project_backgroundPage.jpeg";
 import TextAnimation from "../components/TextAnimation";
@@ -80,7 +80,8 @@ export default function ProjectScreen() {
               <ul>
                 <li>
                   <i class="fa fa-location-arrow colorInfo"></i>
-                  No 100, College of Science, Kerkuk St., Erbil, Iraqi Kurdistan
+                  523C+68M, College of Science, Kerkuk St, Erbil, Iraqi
+                  Kurdistan{" "}
                 </li>
 
                 <li>

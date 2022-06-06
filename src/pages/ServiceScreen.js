@@ -1,30 +1,15 @@
-import React, { useEffect } from "react";
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
-
+import React from "react";
 import { useParams } from "react-router-dom";
 import data from "../utils/data";
-
-// import Product from "../components/Service";
-// import LoadingBox from "../components/LoadingBox";
-// import MessageBox from "../components/MessageBox";
-// import { useDispatch, useSelector } from "react-redux";
-// import { listProducts } from "../actions/productActions";
-// import { listTopSellers } from "../actions/userActions";
-// import { Link } from "react-router-dom";
-// import Topcarusel from "../components/Topcarusel";
-// import { listCategories } from "../actions/categoryActions";
-// import Category from "../components/Category";
-
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import { Helmet } from "react-helmet-async";
 import ListGroup from "react-bootstrap/ListGroup";
-// import Button from "react-bootstrap/Button";
-// import Rating from "../components/Rating";
 import ScrollToTop from "../components/ScrollToTop";
-// import TextAnimationForContact from "../components/TextAnimationForContact";
-// import Service from "../components/Service";
+import ServiceBackground from "../images/web_design.jpeg";
+import ChartReact from "../components/ChartReact";
+import ChartBackend from "../components/ChartBackend";
 
 export default function ServiceScreen(props) {
   const productId = props.match.params.id;
@@ -39,7 +24,8 @@ export default function ServiceScreen(props) {
       <Container fluid className="paddingRemove">
         <img
           className=" w-100 first-background-For-Contact"
-          src="https://as2.ftcdn.net/v2/jpg/03/11/59/79/1000_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg"
+          // src="https://as2.ftcdn.net/v2/jpg/03/11/59/79/1000_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg"
+          src={ServiceBackground}
           alt="First slide"
         ></img>
 
@@ -65,10 +51,13 @@ export default function ServiceScreen(props) {
           .filter((service) => service._id === productId)
           .map((item, index) => (
             <Row key={index}>
-              {console.log("wwwwwwwwwwwwww")}
-              {console.log(item.image)}
+              {/* {console.log("wwwwwwwwwwwwww")}
+              {console.log(item.image)} */}
 
-              <Col md={6}>
+              <Col
+                md={6}
+                className="d-flex justify-content-center align-center align-items-center"
+              >
                 <img
                   className="img-large"
                   // src={"." + item.image}
@@ -89,41 +78,24 @@ export default function ServiceScreen(props) {
                   <ListGroup.Item>
                     <Row>
                       <Col>
-                        <p className="textJustify">
-                          We are an Erbil web design company delivering
-                          stunning, functional websites and web-apps that
-                          resonate with the people interacting with them – your
-                          clients. Our websites and web-apps don't just look
-                          good, they perform, they convert. If you are looking
-                          to generate enquiries, increase sales or maximise
-                          awareness we have the in-house web design and
-                          development teams in place to achieve this. Suncode IT
-                          Solutions and Consultancy is a dependable Erbil Web
-                          Development partner in the area, Iraq who purposefully
-                          tailors our services to meet the specific needs of
-                          agencies. We know you want a trouble-free development
-                          experience and a site that functions exactly as
-                          designed. We provide reliable maintenance services
-                          that release you from the burden of managing upgrades
-                          and handling unplanned client support tasks. Our
-                          agency clients handle the digital strategy, creative
-                          design and overall project direction. We take care of
-                          the development and ongoing support. Smart Solutions
-                          can come to the table as your development team or work
-                          invisibly to support your brand.
-                        </p>
+                        <p className="textJustify">{item.description}</p>
                       </Col>
                     </Row>
                   </ListGroup.Item>
 
-                  <ListGroup.Item>
+                  {/* <ListGroup.Item>
                     Description:
                     <p>{item.description}</p>
-                  </ListGroup.Item>
+                  </ListGroup.Item> */}
                 </ListGroup>
               </Col>
             </Row>
           ))}
+      </Container>
+
+      <Container className="d-flex justify-content-center flex-wrap hightkaka">
+        <ChartReact></ChartReact>
+        <ChartBackend></ChartBackend>
       </Container>
 
       <Container fluid className="colorback">
@@ -136,7 +108,8 @@ export default function ServiceScreen(props) {
               <ul>
                 <li>
                   <i class="fa fa-location-arrow colorInfo"></i>
-                  No 100, College of Science, Kerkuk St., Erbil, Iraqi Kurdistan
+                  523C+68M, College of Science, Kerkuk St, Erbil, Iraqi
+                  Kurdistan{" "}
                 </li>
 
                 <li>

@@ -1,18 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import { Carousel } from "react-responsive-carousel";
 import data from "../utils/data";
-// import Product from "../components/Service";
-// import LoadingBox from "../components/LoadingBox";
-// import MessageBox from "../components/MessageBox";
-// import { useDispatch, useSelector } from "react-redux";
-// import { listProducts } from "../actions/productActions";
-// import { listTopSellers } from "../actions/userActions";
-// import { Link } from "react-router-dom";
-// import Topcarusel from "../components/Topcarusel";
-// import { listCategories } from "../actions/categoryActions";
-// import Category from "../components/Category";
-
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
@@ -33,33 +20,6 @@ import { Link } from "react-router-dom";
 
 export default function HomeScreen() {
   const [mydata, setdata] = useState(initialProjects);
-  //   const dispatch = useDispatch();
-  //   const productList = useSelector((state) => state.productList);
-  //   const { loading, error, products } = productList;
-
-  //   const categoryList = useSelector((state) => state.categoryList);
-  //   const {
-  //     loading: loadingCategory,
-  //     error: errorCategory,
-  //     categories,
-  //   } = categoryList;
-
-  //   const userTopSellersList = useSelector((state) => state.userTopSellersList);
-  //   const {
-  //     loading: loadingSellers,
-  //     error: errorSellers,
-  //     users: sellers,
-  //   } = userTopSellersList;
-
-  //   useEffect(() => {
-
-  //     dispatch(listCategories({}));
-  //     dispatch(listProducts({}));
-  //     dispatch(listTopSellers());
-  //   }, [dispatch]);
-
-  //   console.log("categories at homeScreen");
-  //   console.log(categories);
 
   return (
     <>
@@ -76,8 +36,9 @@ export default function HomeScreen() {
         <Row>
           <Col>
             <p className="d-flex justify-content-center text-wrap font-weight-bold ">
-              We are different. We deliver with outstanding professionalism,
-              reliability, full return on investment accountability.
+              In our company quality, professionalism, and reliability comes
+              first. Hit the Project Button to see yourself and approve what we
+              are doing to help our customers.
             </p>
           </Col>
         </Row>
@@ -147,18 +108,22 @@ export default function HomeScreen() {
         <Container className="d-flex justify-content-center align-center align-items-center spaceT">
           <Row>
             <Col sm={7} className="agency">
-              <h1>Your Erbil Web Development Agency</h1>
+              <h1>Web Development Company</h1>
               <p className="textJustify">
-                We are a professional Erbil Web Development company delivering
-                stunning, functional websites and web-apps that resonate with
-                the people interacting with them – your clients.
+                We are a promising web development company in Erbil, serving
+                glossy, modern designed, and functional websites and web-apps
+                that create massive impression on your clients when they
+                interact with your brand. Our help in creating and designing a
+                website or app for your brand guarantee your business and
+                increase your customers, in this way your company/brand can last
+                forever.
               </p>
-              <p className="textJustify">
+              {/* <p className="textJustify">
                 Our websites and web-apps don't just look good, they perform,
                 they convert. If you are looking to generate enquiries, increase
                 sales or maximise awareness we have the in-house web design and
                 development teams in place to achieve this.
-              </p>
+              </p> */}
             </Col>
             <Col
               sm={5}
@@ -186,7 +151,8 @@ export default function HomeScreen() {
               <ul>
                 <li>
                   <i class="fa fa-location-arrow colorInfo"></i>
-                  No 100, College of Science, Kerkuk St., Erbil, Iraqi Kurdistan
+                  523C+68M, College of Science, Kerkuk St, Erbil, Iraqi
+                  Kurdistan
                 </li>
 
                 <li>

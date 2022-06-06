@@ -1,4 +1,5 @@
 {
+  "homepage": "http://Awara-Amin.github.io/glossy-code-f-2/",
   "name": "glossy-website",
   "version": "0.1.0",
   "private": true,
@@ -20,6 +21,7 @@
     "react-simple-typewriter": "^3.0.1",
     "react-use": "^17.4.0",
     "styled-components": "^5.3.5",
+    "victory-pie": "^36.4.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

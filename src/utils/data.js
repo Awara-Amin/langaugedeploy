@@ -42,7 +42,8 @@ const data = {
       brand: "Nike",
       rating: 4.5,
       numReviews: 10,
-      description: "high quality productttt",
+      description:
+        "We are an Erbil web design company delivering stunning, functional websites and web-apps that resonate with the people interacting with them – your clients. Our websites and web-apps don't just look good, they perform, they convert. If you are looking to generate enquiries, increase sales or maximise awareness we have the in-house web design and development teams in place to achieve this. Suncode IT Solutions and Consultancy is a dependable Erbil Web Development partner in the area, Iraq who purposefully tailors our services to meet the specific needs of agencies. We know you want a trouble-free development experience and a site that functions exactly as designed. We provide reliable maintenance services that release you from the burden of managing upgrades and handling unplanned client support tasks. Our agency clients handle the digital strategy, creative design and overall project direction. We take care of the development and ongoing support. Smart Solutions can come to the table as your development team or work invisibly to support your brand.",
     },
     {
       _id: "2",
@@ -57,7 +58,8 @@ const data = {
       brand: "Nike",
       rating: 4.5,
       numReviews: 10,
-      description: "high quality product",
+      description:
+        "We are an Erbil web design company delivering stunning, functional websites and web-apps that resonate with the people interacting with them – your clients. Our websites and web-apps don't just look good, they perform, they convert. If you are looking to generate enquiries, increase sales or maximise awareness we have the in-house web design and development teams in place to achieve this. Suncode IT Solutions and Consultancy is a dependable Erbil Web Development partner in the area, Iraq who purposefully tailors our services to meet the specific needs of agencies. We know you want a trouble-free development experience and a site that functions exactly as designed. We provide reliable maintenance services that release you from the burden of managing upgrades and handling unplanned client support tasks. Our agency clients handle the digital strategy, creative design and overall project direction. We take care of the development and ongoing support. Smart Solutions can come to the table as your development team or work invisibly to support your brand.",
     },
     {
       _id: "3",
@@ -71,7 +73,8 @@ const data = {
       brand: "Nike",
       rating: 4.5,
       numReviews: 10,
-      description: "high quality product taza",
+      description:
+        "We are an Erbil web design company delivering stunning, functional websites and web-apps that resonate with the people interacting with them – your clients. Our websites and web-apps don't just look good, they perform, they convert. If you are looking to generate enquiries, increase sales or maximise awareness we have the in-house web design and development teams in place to achieve this. Suncode IT Solutions and Consultancy is a dependable Erbil Web Development partner in the area, Iraq who purposefully tailors our services to meet the specific needs of agencies. We know you want a trouble-free development experience and a site that functions exactly as designed. We provide reliable maintenance services that release you from the burden of managing upgrades and handling unplanned client support tasks. Our agency clients handle the digital strategy, creative design and overall project direction. We take care of the development and ongoing support. Smart Solutions can come to the table as your development team or work invisibly to support your brand.",
     },
     {
       _id: "4",
@@ -85,7 +88,8 @@ const data = {
       brand: "Nike",
       rating: 4.5,
       numReviews: 10,
-      description: "high quality product",
+      description:
+        "We are an Erbil web design company delivering stunning, functional websites and web-apps that resonate with the people interacting with them – your clients. Our websites and web-apps don't just look good, they perform, they convert. If you are looking to generate enquiries, increase sales or maximise awareness we have the in-house web design and development teams in place to achieve this. Suncode IT Solutions and Consultancy is a dependable Erbil Web Development partner in the area, Iraq who purposefully tailors our services to meet the specific needs of agencies. We know you want a trouble-free development experience and a site that functions exactly as designed. We provide reliable maintenance services that release you from the burden of managing upgrades and handling unplanned client support tasks. Our agency clients handle the digital strategy, creative design and overall project direction. We take care of the development and ongoing support. Smart Solutions can come to the table as your development team or work invisibly to support your brand.",
     },
   ],
 

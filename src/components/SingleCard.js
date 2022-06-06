@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 
-import logo from "../images/logoSm.png";
+// import logo from "../images/logoSm.png";
 
 const SingleCard = ({ data }) => {
   return (
