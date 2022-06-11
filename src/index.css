@@ -36,7 +36,7 @@ main {
   margin-bottom: 50px;
 }
 #background {
-  background-image: url("./assets/background2.jpeg");
+  background-image: url("./images/background2.jpeg");
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
@@ -1140,7 +1140,7 @@ h8 {
 
 /* //////////////////// contact, here is for normal screen/Computer/////////// */
 .contactBackg {
-  background-image: url("./assets/contactBackground.jpeg");
+  background-image: url("./images/contactBackground.jpeg");
 }
 
 /*                                 800  */
