@@ -1,6 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
 import emailjs from "emailjs-com";
+
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
+import cookies from "js-cookie";
+
+const languages = [
+  {
+    code: "fr",
+    name: "Français",
+    country_code: "fr",
+  },
+  {
+    code: "en",
+    name: "English",
+    country_code: "gb",
+  },
+  {
+    code: "ar",
+    name: "العربية",
+    dir: "rtl",
+    country_code: "sa",
+  },
+];
+
 const Mailer = () => {
+  const currentLanguageCode = cookies.get("i18next") || "en";
+  const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
+  const { t } = useTranslation();
+  console.log("what is this t mama");
+  console.log(t);
+
+  useEffect(() => {
+    console.log("Setting page stuff");
+    document.body.dir = currentLanguage.dir || "ltr";
+    document.title = t("app_title");
+  }, [currentLanguage, t]);
+
   function sendEmail(e) {
     alert("You message has been send successfully");
     e.preventDefault();
@@ -32,13 +68,13 @@ const Mailer = () => {
         backgroundSize: "cover",
       }}
     >
-      <h1 style={{ marginTop: "30px" }}>Contact Us</h1>
+      <h1 style={{ marginTop: "30px" }}>{t("contact-us")}</h1>
       <form
         className="row formContact"
         // style={{ margin: "25px 85px 75px 100px" }}
         onSubmit={sendEmail}
       >
-        <label>Name</label>
+        <label>{t("name")}</label>
         <input
           type="text"
           name="name"
@@ -46,7 +82,7 @@ const Mailer = () => {
           placeholder="Your name"
         ></input>
 
-        <label>Email</label>
+        <label>{t("email")}</label>
         <input
           type="email"
           name="user_email"
@@ -54,7 +90,7 @@ const Mailer = () => {
           placeholder="Your email"
         ></input>
 
-        <label>Message</label>
+        <label>{t("message")}</label>
         <textarea
           name="message"
           rows="6"

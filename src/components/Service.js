@@ -1,9 +1,45 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
+import cookies from "js-cookie";
+
+const languages = [
+  {
+    code: "fr",
+    name: "Français",
+    country_code: "fr",
+  },
+  {
+    code: "en",
+    name: "English",
+    country_code: "gb",
+  },
+  {
+    code: "ar",
+    name: "العربية",
+    dir: "rtl",
+    country_code: "sa",
+  },
+];
+
 export default function Service(props) {
+  console.log("categories at homeScreen");
+  const currentLanguageCode = cookies.get("i18next") || "en";
+  const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
+  const { t } = useTranslation();
+  console.log("what is this t mama");
+  console.log(t);
+
+  useEffect(() => {
+    console.log("Setting page stuff");
+    document.body.dir = currentLanguage.dir || "ltr";
+    document.title = t("app_title");
+  }, [currentLanguage, t]);
+
   const { service } = props;
   console.log("awaaaaaaaa thya");
   console.log(service);
@@ -31,10 +67,7 @@ export default function Service(props) {
             </Link>
           </div>
 
-          <Card.Text className="texts">
-            We are using the best tools and technologies to create unique
-            websites and eye catching graphic design.
-          </Card.Text>
+          <Card.Text className="texts">{t("we-are-using-the")}</Card.Text>
           <Card.Text className="explorCenter">Explore More</Card.Text>
         </div>
       </Card.Body>

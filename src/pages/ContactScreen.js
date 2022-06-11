@@ -11,8 +11,42 @@ import ContactBackground from "../images/contact_BackgroundPage.jpeg";
 import Mailer from "../components/Mailer";
 import TextAnimation from "../components/TextAnimation";
 
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
+import cookies from "js-cookie";
+
+const languages = [
+  {
+    code: "fr",
+    name: "Français",
+    country_code: "fr",
+  },
+  {
+    code: "en",
+    name: "English",
+    country_code: "gb",
+  },
+  {
+    code: "ar",
+    name: "العربية",
+    dir: "rtl",
+    country_code: "sa",
+  },
+];
 export default function ContactScreen() {
   console.log(data);
+  const currentLanguageCode = cookies.get("i18next") || "en";
+  const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
+  const { t } = useTranslation();
+  console.log("what is this t mama");
+  console.log(t);
+
+  useEffect(() => {
+    console.log("Setting page stuff");
+    document.body.dir = currentLanguage.dir || "ltr";
+    document.title = t("app_title");
+  }, [currentLanguage, t]);
+
   return (
     <>
       <Helmet>
@@ -26,7 +60,7 @@ export default function ContactScreen() {
         ></img>
 
         <Container className="glossyCodeName">
-          <Row>
+          <Row dir="ltr">
             <Col>
               {/* <h1>Glossy Code</h1> */}
               <TextAnimation></TextAnimation> Code
@@ -37,7 +71,7 @@ export default function ContactScreen() {
         <Container className="glossyCodeTexts-Contact">
           <Row>
             <Col className="w 40%">
-              <h2>Contact Us</h2>
+              <h2>{t("contact-us")}</h2>
             </Col>
           </Row>
         </Container>
@@ -54,7 +88,8 @@ export default function ContactScreen() {
               className="d-flex justify-content-center align-center align-items-center agency "
             >
               <h2 className="text-color1">
-                Contact us 24/7, our service department reply you right back
+                {/* Contact us 24/7, our service department reply you right back */}
+                {t("contact-us-24")}
               </h2>
             </Col>
           </Row>
@@ -67,7 +102,8 @@ export default function ContactScreen() {
           <div>
             <div>
               <h1 className="makeitCenter">
-                Rememeber Glossy Code can provide the best services in:
+                {t("remember-glossycode")}
+                {/* Rememeber Glossy Code can provide the best services in: */}
               </h1>
             </div>
             {/* <div>
@@ -137,7 +173,7 @@ export default function ContactScreen() {
 
       <Container fluid className="colorback">
         <div>
-          <h1>Contact Info</h1>
+          <h1>{t("contact-info")}</h1>
         </div>
         <Row>
           <Col xs={12} md={8}>
@@ -165,7 +201,7 @@ export default function ContactScreen() {
           <Col xs={6} md={4}>
             <Row>
               <Col>
-                <h1>Follow us on</h1>
+                <h1>{t("follow-us-on")}</h1>
               </Col>
             </Row>
 

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import spinner from "../images/spinner.gif";
 import SingleCard from "../components/SingleCard";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Helmet } from "react-helmet-async";
 import Container from "react-bootstrap/Container";
 import ScrollToTop from "../components/ScrollToTop";
 
@@ -13,11 +14,50 @@ import OtherSkills from "../components/OtherSkills";
 import ProjectBackground from "../images/project_backgroundPage.jpeg";
 import TextAnimation from "../components/TextAnimation";
 
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
+import cookies from "js-cookie";
+
+const languages = [
+  {
+    code: "fr",
+    name: "Français",
+    country_code: "fr",
+  },
+  {
+    code: "en",
+    name: "English",
+    country_code: "gb",
+  },
+  {
+    code: "ar",
+    name: "العربية",
+    dir: "rtl",
+    country_code: "sa",
+  },
+];
+
 export default function ProjectScreen() {
   const [mydata, setdata] = useState(initialProjects);
   const [loading, setLoading] = useState(false);
+
+  const currentLanguageCode = cookies.get("i18next") || "en";
+  const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
+  const { t } = useTranslation();
+  console.log("what is this t mama");
+  console.log(t);
+
+  useEffect(() => {
+    console.log("Setting page stuff");
+    document.body.dir = currentLanguage.dir || "ltr";
+    document.title = t("app_title");
+  }, [currentLanguage, t]);
+
   return (
     <>
+      <Helmet>
+        <title>Glossy Code</title>
+      </Helmet>
       <Container fluid className="paddingRemove">
         <img
           className=" w-100 first-background-For-Project"
@@ -27,7 +67,7 @@ export default function ProjectScreen() {
         ></img>
 
         <Container className="glossyCodeName">
-          <Row>
+          <Row dir="ltr">
             <Col>
               {/* <h1>Glossy Code</h1> */}
               <TextAnimation></TextAnimation> Code
@@ -38,7 +78,7 @@ export default function ProjectScreen() {
         <Container className="glossyCodeTexts-Contact">
           <Row>
             <Col className="w 40%">
-              <h2>Projects</h2>
+              <h2>{t("our-projects")}</h2>
             </Col>
           </Row>
         </Container>
@@ -48,7 +88,7 @@ export default function ProjectScreen() {
         {/* <!-- this section is about me --> */}
         <p className="md:text-3xl ">
           <i className="fa fa-project-diagram text-gray-700 px-2"></i>
-          All Projects
+          {t("all-current-projects")}
         </p>
 
         <hr className="w-48 m-auto" />
@@ -72,7 +112,7 @@ export default function ProjectScreen() {
       </Row>
       <Container fluid className="colorback">
         <div>
-          <h1>Contact Info</h1>
+          <h1>{t("contact-info")}</h1>
         </div>
         <Row>
           <Col xs={12} md={8}>
@@ -100,7 +140,7 @@ export default function ProjectScreen() {
           <Col xs={6} md={4}>
             <Row>
               <Col>
-                <h1>Follow us on</h1>
+                <h1>{t("follow-us-on")}</h1>
               </Col>
             </Row>
 

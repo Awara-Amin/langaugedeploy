@@ -9,8 +9,41 @@ import TextAnimation from "../components/TextAnimation";
 import ChartReact from "../components/ChartReact";
 import ChartBackend from "../components/ChartBackend";
 
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
+import cookies from "js-cookie";
+
+const languages = [
+  {
+    code: "fr",
+    name: "Français",
+    country_code: "fr",
+  },
+  {
+    code: "en",
+    name: "English",
+    country_code: "gb",
+  },
+  {
+    code: "ar",
+    name: "العربية",
+    dir: "rtl",
+    country_code: "sa",
+  },
+];
 export default function ContactScreen() {
   console.log("categories at homeScreen");
+  const currentLanguageCode = cookies.get("i18next") || "en";
+  const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
+  const { t } = useTranslation();
+  console.log("what is this t mama");
+  console.log(t);
+
+  useEffect(() => {
+    console.log("Setting page stuff");
+    document.body.dir = currentLanguage.dir || "ltr";
+    document.title = t("app_title");
+  }, [currentLanguage, t]);
 
   return (
     <>
@@ -25,7 +58,7 @@ export default function ContactScreen() {
         ></img>
 
         <Container className="glossyCodeName">
-          <Row>
+          <Row dir="ltr">
             <Col>
               {/* <h1>Glossy Code</h1> */}
               <TextAnimation></TextAnimation> Code
@@ -36,7 +69,7 @@ export default function ContactScreen() {
         <Container className="glossyCodeTexts-Contact">
           <Row>
             <Col className="w 40%">
-              <h2>About Us</h2>
+              <h2>{t("about-us")}</h2>
             </Col>
           </Row>
         </Container>
@@ -50,20 +83,14 @@ export default function ContactScreen() {
             className="d-flex justify-content-center align-center align-items-center w-20"
           >
             <h1 className="toMakeBold">
-              ABOUT OUR COMPANY IN ERBIL-
-              <span className="title-2">KURDISTAN-IRAQ</span>
+              {t("about-our-company")}
+              {/* ABOUT OUR COMPANY IN ERBIL-KURDISTAN-IRAQ */}
+              {/* <span className="title-2">KURDISTAN-IRAQ</span> */}
             </h1>
           </Col>
 
           <Col sm={7}>
-            <p className="textJustify">
-              Glossy Code has been growing fast and becoming one of the best
-              websites designing & website development company in Erbil. Our
-              moto is to deliver high quality services to our client. Glossy
-              Code Company provides affordable and fully functional websites and
-              mobile website (responsive website), E-commerce and website
-              development solution.
-            </p>
+            <p className="textJustify">{t("glossy-code-has-been-growing")}</p>
           </Col>
         </Row>
       </Container>
@@ -79,10 +106,7 @@ export default function ContactScreen() {
             >
               <div className="agency-About">
                 <div className="about-2">
-                  <h1 className="colorPart2">
-                    Glossy Code Company can be your partener and do all below to
-                    you :
-                  </h1>
+                  <h1 className="colorPart2">{t("glossycode-company-can")}</h1>
                 </div>
 
                 <div className="about-2">
@@ -122,7 +146,8 @@ export default function ContactScreen() {
         <Row>
           <Col className="hightkaka1">
             <h1 className="toMakeBold">
-              The Tools We Use In Creating & Designing Websites And Web apps
+              {t("the-tools-we")}
+              {/* The Tools We Use In Creating & Designing Websites And Web apps */}
             </h1>
           </Col>
         </Row>
@@ -174,7 +199,7 @@ export default function ContactScreen() {
 
       <Container fluid className="colorback">
         <div>
-          <h1>Contact Info</h1>
+          <h1>{t("contact-info")}</h1>
         </div>
         <Row>
           <Col xs={12} md={8}>
@@ -202,7 +227,7 @@ export default function ContactScreen() {
           <Col xs={6} md={4}>
             <Row>
               <Col>
-                <h1>Follow us on</h1>
+                <h1>{t("follow-us-on")}</h1>
               </Col>
             </Row>
 

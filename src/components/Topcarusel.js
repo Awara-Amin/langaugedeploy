@@ -20,7 +20,7 @@ export default function Topcarusel() {
       ></img>
 
       <Container className="glossyCodeName">
-        <Row>
+        <Row dir="ltr">
           <Col>
             <h1>
               {/* <span>Glossy</span> Code */}
@@ -31,7 +31,7 @@ export default function Topcarusel() {
       </Container>
 
       <Container className="glossyCodeTexts">
-        <Row>
+        <Row dir="ltr">
           <Col className="w 40%">
             <h2 className="brightness">We Are Flexible Web Developers</h2>
           </Col>
