@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 import { Helmet } from "react-helmet-async";
 import ListGroup from "react-bootstrap/ListGroup";
 import ScrollToTop from "../components/ScrollToTop";
-import ServiceBackground from "../images/web_design.jpeg";
+// import ServiceBackground from "../images/web_design.jpeg";
 import ChartReact from "../components/ChartReact";
 import ChartBackend from "../components/ChartBackend";
 
@@ -25,7 +25,8 @@ export default function ServiceScreen(props) {
         <img
           className=" w-100 first-background-For-Contact"
           // src="https://as2.ftcdn.net/v2/jpg/03/11/59/79/1000_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg"
-          src={ServiceBackground}
+          // src={ServiceBackground}
+          src="/images/web_design.jpeg"
           alt="First slide"
         ></img>
 

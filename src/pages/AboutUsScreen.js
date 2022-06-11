@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 import { Helmet } from "react-helmet-async";
 import Container from "react-bootstrap/Container";
 import ScrollToTop from "../components/ScrollToTop";
-import AboutBackground from "../images/about_backgroundPage.webp";
+// import AboutBackground from "/images/about_backgroundPage.webp";
 import TextAnimation from "../components/TextAnimation";
 import ChartReact from "../components/ChartReact";
 import ChartBackend from "../components/ChartBackend";
@@ -53,7 +53,7 @@ export default function ContactScreen() {
       <Container fluid className="paddingRemove">
         <img
           className=" w-100 first-background-For-Contact"
-          src={AboutBackground}
+          src="/images/about_backgroundPage.webp"
           alt="First slide"
         ></img>
 

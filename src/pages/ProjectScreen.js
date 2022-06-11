@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import spinner from "../images/spinner.gif";
+// import spinner from "../images/spinner.gif";
 import SingleCard from "../components/SingleCard";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -11,7 +11,7 @@ import ScrollToTop from "../components/ScrollToTop";
 import { initialProjects } from "../utils/initialProjects";
 // import data from "../utils/data";
 import OtherSkills from "../components/OtherSkills";
-import ProjectBackground from "../images/project_backgroundPage.jpeg";
+// import ProjectBackground from "../images/project_backgroundPage.jpeg";
 import TextAnimation from "../components/TextAnimation";
 
 import { useTranslation } from "react-i18next";
@@ -61,7 +61,8 @@ export default function ProjectScreen() {
       <Container fluid className="paddingRemove">
         <img
           className=" w-100 first-background-For-Project"
-          src={ProjectBackground}
+          src="/images/project_backgroundPage.jpeg"
+          // src={ProjectBackground}
           // src="https://as2.ftcdn.net/v2/jpg/03/11/59/79/1000_F_311597945_LuOQuFfk5wGWP4r9eUMpSmBdYES58lsK.jpg"
           alt="First slide"
         ></img>
@@ -102,7 +103,7 @@ export default function ProjectScreen() {
       <Row className="flex flex-wrap justify-content-center bg-color-gray">
         {loading ? (
           <div>
-            <img src={spinner} alt="" />
+            <h1>loading</h1>
           </div>
         ) : (
           mydata.oldProjects.map((project) => {

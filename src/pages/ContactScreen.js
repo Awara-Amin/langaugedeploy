@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";
 import Container from "react-bootstrap/Container";
 import ScrollToTop from "../components/ScrollToTop";
 import data from "../utils/data";
-import ContactBackground from "../images/contact_BackgroundPage.jpeg";
+// import ContactBackground from "../images/contact_BackgroundPage.jpeg";
 import Mailer from "../components/Mailer";
 import TextAnimation from "../components/TextAnimation";
 
@@ -55,7 +55,8 @@ export default function ContactScreen() {
       <Container fluid className="paddingRemove">
         <img
           className=" w-100 first-background-For-Contact"
-          src={ContactBackground}
+          src="/images/contact_BackgroundPage.jpeg"
+          // src={ContactBackground}
           alt="First slide"
         ></img>
 
