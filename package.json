@@ -1,5 +1,5 @@
 {
-  "homepage": "http://Awara-Amin.github.io/glossycode-language/",
+  "homepage": "http://Awara-Amin.github.io/glossyCode-language-1",
   "name": "glossy-website",
   "version": "0.1.0",
   "engines": {
@@ -39,6 +39,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
